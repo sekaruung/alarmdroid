@@ -1,0 +1,1434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- saved from url=(0022)https://netzpurist.de/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style scope="paper-material">paper-material {
+  display: block;
+      position: relative;
+}</style><style scope="paper-material-0">paper-material.paper-material-0 {
+  transition:box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+paper-material.paper-material-0[elevation="1"] {
+  box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                  0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+paper-material.paper-material-0[elevation="2"] {
+  box-shadow:0 4px 5px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                  0 2px 4px -1px rgba(0, 0, 0, 0.4);
+}
+
+paper-material.paper-material-0[elevation="3"] {
+  box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 18px 0 rgba(0, 0, 0, 0.12),
+                  0 3px 5px -1px rgba(0, 0, 0, 0.4);
+}
+
+paper-material.paper-material-0[elevation="4"] {
+  box-shadow:0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                  0 3px 14px 2px rgba(0, 0, 0, 0.12),
+                  0 5px 5px -3px rgba(0, 0, 0, 0.4);
+}
+
+paper-material.paper-material-0[elevation="5"] {
+  box-shadow:0 16px 24px 2px rgba(0, 0, 0, 0.14),
+                  0  6px 30px 5px rgba(0, 0, 0, 0.12),
+                  0  8px 10px -5px rgba(0, 0, 0, 0.4);
+}</style><style scope="paper-header-panel">paper-header-panel {
+  position: relative;
+  height: 100%;
+}
+
+#mainContainer.paper-header-panel {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#mainPanel.paper-header-panel {
+  position: relative;
+}
+
+paper-header-panel[mode=scroll] #mainContainer.paper-header-panel {
+  overflow: visible;
+}
+
+paper-header-panel[mode=scroll] {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+paper-header-panel[mode=cover] #mainContainer.paper-header-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+paper-header-panel[mode=cover] #mainPanel.paper-header-panel {
+  position: static;
+}
+
+#dropShadow.paper-header-panel {
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+
+  -webkit-transform: scale3d(1, 0, 1);
+  transform: scale3d(1, 0, 1);
+
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  opacity: 0;
+}
+
+#dropShadow.has-shadow.paper-header-panel {
+  opacity: 1;
+
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}</style><style scope="paper-header-panel-0">paper-header-panel.paper-header-panel-0 {
+  display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:column;
+      -webkit-flex-direction:column;
+      flex-direction:column;
+}
+
+.paper-header-panel-0 #mainContainer.paper-header-panel {
+  -ms-flex:1 1 0.000000001px;
+      -webkit-flex:1;
+      flex:1;
+      -webkit-flex-basis:0.000000001px;
+      flex-basis:0.000000001px;
+}
+
+.paper-header-panel-0 #mainPanel.paper-header-panel {
+  display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:column;
+      -webkit-flex-direction:column;
+      flex-direction:column;-ms-flex:1 1 0.000000001px;
+      -webkit-flex:1;
+      flex:1;
+      -webkit-flex-basis:0.000000001px;
+      flex-basis:0.000000001px;
+}
+
+paper-header-panel.paper-header-panel-0[mode=scroll] #mainContainer.paper-header-panel {
+  ;
+}
+
+paper-header-panel.paper-header-panel-0[mode=cover] #mainContainer.paper-header-panel {
+  ;
+}
+
+paper-header-panel.paper-header-panel-0[mode=standard] #mainContainer.paper-header-panel {
+  ;
+}
+
+paper-header-panel.paper-header-panel-0[mode=seamed] #mainContainer.paper-header-panel {
+  ;
+}
+
+paper-header-panel.paper-header-panel-0[mode=waterfall] #mainContainer.paper-header-panel {
+  ;
+}
+
+paper-header-panel.paper-header-panel-0[mode=waterfall-tall] #mainContainer.paper-header-panel {
+  ;
+}
+
+.paper-header-panel-0 #dropShadow.paper-header-panel {
+  height:6px;
+    bottom:-6px;
+    box-shadow:inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+}</style><style scope="paper-toolbar">paper-toolbar {
+  display: block;
+      position: relative;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+
+      
+      height: 64px;
+}
+
+paper-toolbar.animate {
+  transition: height 0.18s ease-in;
+}
+
+paper-toolbar.medium-tall {
+  height: 128px;
+}
+
+paper-toolbar.tall {
+  height: 192px;
+}
+
+.toolbar-tools.paper-toolbar {
+  position: relative;
+      height: 64px;
+      padding: 0 16px;
+      pointer-events: none;
+}
+
+@media (max-width: 639px) {
+paper-toolbar {
+  height: 56px;
+}
+
+paper-toolbar.medium-tall {
+  height: 112px;
+}
+
+paper-toolbar.tall {
+  height: 168px;
+}
+
+.toolbar-tools.paper-toolbar {
+  height: 56px;
+}
+
+}
+
+#topBar.paper-toolbar {
+  position: relative;
+}
+
+#middleBar.paper-toolbar {
+  position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+}
+
+paper-toolbar.tall #middleBar.paper-toolbar,
+    paper-toolbar.medium-tall #middleBar.paper-toolbar {
+  -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+}
+
+#bottomBar.paper-toolbar {
+  position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+}
+
+.toolbar-tools.paper-toolbar  > *:not([disabled]) {
+  pointer-events: auto;
+}
+
+.toolbar-tools.paper-toolbar  .title {
+  pointer-events: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+
+      
+      font-weight: 400 !important;
+}
+
+.toolbar-tools.paper-toolbar  paper-icon-button[icon=menu] {
+  margin-right: 24px;
+}
+
+.toolbar-tools.paper-toolbar  > .title,
+    .toolbar-tools.paper-toolbar [select=".middle"] > .title,
+    .toolbar-tools.paper-toolbar [select=".bottom"] > .title {
+  margin-left: 56px;
+}
+
+.toolbar-tools.paper-toolbar  > paper-icon-button + .title,
+    .toolbar-tools.paper-toolbar [select=".middle"] paper-icon-button + .title,
+    .toolbar-tools.paper-toolbar [select=".bottom"] paper-icon-button + .title {
+  margin-left: 0;
+}
+
+.toolbar-tools.paper-toolbar  > .fit {
+  position: absolute;
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      margin: 0;
+}</style><style scope="paper-toolbar-0">paper-toolbar.paper-toolbar-0 {
+  background:#6da000;
+
+      color:#ffffff;;
+}
+
+.paper-toolbar-0 .toolbar-tools.paper-toolbar  .title {
+  font-family:'Roboto', 'Noto', sans-serif;
+      -webkit-font-smoothing:antialiased;
+      
+      text-rendering:optimizeLegibility;
+      
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+
+      font-size:20px;
+      font-weight:500;
+      line-height:28px;-ms-flex:1 1 0.000000001px;
+      -webkit-flex:1;
+      flex:1;
+      -webkit-flex-basis:0.000000001px;
+      flex-basis:0.000000001px;
+}</style><style scope="paper-ripple">paper-ripple {
+  display: block;
+      position: absolute;
+      border-radius: inherit;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+}
+
+paper-ripple[animating] {
+  -webkit-transform: translate(0, 0);
+      transform: translate3d(0, 0, 0);
+}
+
+paper-ripple[noink] {
+  pointer-events: none;
+}
+
+#background.paper-ripple,
+    #waves.paper-ripple,
+    .wave-container.paper-ripple,
+    .wave.paper-ripple {
+  pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+}
+
+#background.paper-ripple,
+    .wave.paper-ripple {
+  opacity: 0;
+}
+
+#waves.paper-ripple,
+    .wave.paper-ripple {
+  overflow: hidden;
+}
+
+.wave-container.paper-ripple,
+    .wave.paper-ripple {
+  border-radius: 50%;
+}
+
+paper-ripple.circle #background.paper-ripple,
+    paper-ripple.circle #waves.paper-ripple {
+  border-radius: 50%;
+}
+
+paper-ripple.circle .wave-container.paper-ripple {
+  overflow: hidden;
+}</style><style scope="paper-button">paper-button {
+  display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      min-width: 5.14em;
+      margin: 0 0.29em;
+      background: transparent;
+      text-align: center;
+      font: inherit;
+      text-transform: uppercase;
+      outline: none;
+      border-radius: 3px;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      z-index: 0;
+}
+
+.keyboard-focus.paper-button {
+  font-weight: bold;
+}
+
+paper-button[disabled] {
+  background: #eaeaea;
+      color: #a8a8a8;
+      cursor: auto;
+      pointer-events: none;
+}
+
+paper-button[noink] paper-ripple.paper-button {
+  display: none;
+}
+
+paper-material.paper-button {
+  border-radius: inherit;
+}
+
+.content.paper-button  * {
+  text-transform: inherit;
+}
+
+.content.paper-button {
+  padding: 0.7em 0.57em
+}</style><style scope="paper-button-0">paper-button.paper-button-0 {
+  ;
+}
+
+paper-button.paper-button-0[disabled] {
+  ;
+}</style><style scope="iron-overlay-backdrop">iron-overlay-backdrop {
+  position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+      transition: opacity 0.2s;
+}</style><style scope="paper-dialog">paper-dialog {
+  display: block;
+  margin: 24px 40px;
+}
+
+paper-dialog  > * {
+  margin-top: 20px;
+  padding: 0 24px;
+}
+
+paper-dialog  > .no-padding {
+  padding: 0;
+}
+
+paper-dialog  > *:first-child {
+  margin-top: 24px;
+}
+
+paper-dialog  > *:last-child {
+  margin-bottom: 24px;
+}
+
+paper-dialog  h2 {
+  position: relative;
+  margin: 0;
+}
+
+paper-dialog  .buttons {
+  position: relative;
+  padding: 8px 8px 8px 24px;
+  margin: 0;
+}</style><style scope="paper-dialog-0">paper-dialog.paper-dialog-0 {
+  background:#ffffff;
+
+  color:#212121;-webkit-overflow-scrolling:touch;
+      overflow:auto;font-family:'Roboto', 'Noto', sans-serif;
+      -webkit-font-smoothing:antialiased;
+
+      font-size:14px;
+      font-weight:400;
+      line-height:20px;box-shadow:0 16px 24px 2px rgba(0, 0, 0, 0.14),
+                  0  6px 30px 5px rgba(0, 0, 0, 0.12),
+                  0  8px 10px -5px rgba(0, 0, 0, 0.4);;
+}
+
+paper-dialog.paper-dialog-0  h2 {
+  font-family:'Roboto', 'Noto', sans-serif;
+      -webkit-font-smoothing:antialiased;
+      
+      text-rendering:optimizeLegibility;
+      
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+
+      font-size:20px;
+      font-weight:500;
+      line-height:28px;;
+}
+
+paper-dialog.paper-dialog-0  .buttons {
+  color:#3f51b5;display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:row;
+      -webkit-flex-direction:row;
+      flex-direction:row;-ms-flex-pack:end;
+      -webkit-justify-content:flex-end;
+      justify-content:flex-end;
+}</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+        
+        <meta name="robots" content="noindex">
+        
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="./index_files/styles_desktop.css" is="custom-style">
+        <link rel="stylesheet" href="./index_files/css" title="roboto">
+        <title>
+            netzpurist.de
+        </title>
+        <!--script type="text/javascript" src="res/jquery.min-1.3.2.js"></script-->
+        <script async="" src="./index_files/analytics.js.download"></script><script src="./index_files/jquery-1.7.2.min.js.download"></script>
+        <!--script type="text/javascript" src="res/dynamicindex5_bookmarkscroll.js">
+        /***********************************************
+        * Scrolling HTML bookmarks- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+        * This notice MUST stay intact for legal use
+        * Visit Project Page at http://www.dynamicdrive.com for full source code
+        ***********************************************/
+        </script>
+        <script type="text/javascript">
+            $(function () {
+                if((window.devicePixelRatio===undefined?1:window.devicePixelRatio)>1) {
+                    document.cookie='HTTP_IS_RETINA=1;path=/';  
+                }
+            });
+        </script-->
+        <script>
+            function toggledisplay (id) {
+                if (document.getElementById) {
+                    var mydiv = document.getElementById(id);
+                    mydiv.style.display = (mydiv.style.display=='block'?'none':'block');
+                }
+            }
+            
+            function show(id) {
+                if (document.getElementById) {
+                    var mydiv = document.getElementById(id);
+                    mydiv.style.display = 'block';
+                }
+            }
+        </script>
+        <script src="./index_files/lightbox.js.download"></script>
+        <link href="./index_files/lightbox.css" rel="stylesheet">
+		
+		
+		<style is="custom-style"></style>
+		
+		
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+
+	<script src="./index_files/webcomponents-lite.min.js.download"></script>
+
+	<link rel="stylesheet" href="./index_files/css(1)"><link rel="stylesheet" href="./index_files/css(2)"><link rel="import" href="https://netzpurist.de/bower_components/font-roboto/roboto.html">
+	<style></style><link rel="import" href="https://netzpurist.de/bower_components/paper-material/paper-material.html">
+	<style></style><link rel="import" href="https://netzpurist.de/bower_components/paper-header-panel/paper-header-panel.html">
+	<style>
+
+  /*******************************
+            Flex Layout
+  *******************************/
+
+  html /deep/ .layout.horizontal,
+  html /deep/ .layout.horizontal-reverse,
+  html /deep/ .layout.vertical,
+  html /deep/ .layout.vertical-reverse {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  html /deep/ .layout.inline {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+  }
+
+  html /deep/ .layout.horizontal {
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
+  html /deep/ .layout.horizontal-reverse {
+    -ms-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  html /deep/ .layout.vertical {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  html /deep/ .layout.vertical-reverse {
+    -ms-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  html /deep/ .layout.wrap {
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  html /deep/ .layout.wrap-reverse {
+    -ms-flex-wrap: wrap-reverse;
+    -webkit-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  html /deep/ .flex-auto {
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  html /deep/ .flex-none {
+    -ms-flex: none;
+    -webkit-flex: none;
+    flex: none;
+  }
+
+  html /deep/ .flex,
+  html /deep/ .flex-1 {
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+  }
+
+  html /deep/ .flex-2 {
+    -ms-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+  }
+
+  html /deep/ .flex-3 {
+    -ms-flex: 3;
+    -webkit-flex: 3;
+    flex: 3;
+  }
+
+  html /deep/ .flex-4 {
+    -ms-flex: 4;
+    -webkit-flex: 4;
+    flex: 4;
+  }
+
+  html /deep/ .flex-5 {
+    -ms-flex: 5;
+    -webkit-flex: 5;
+    flex: 5;
+  }
+
+  html /deep/ .flex-6 {
+    -ms-flex: 6;
+    -webkit-flex: 6;
+    flex: 6;
+  }
+
+  html /deep/ .flex-7 {
+    -ms-flex: 7;
+    -webkit-flex: 7;
+    flex: 7;
+  }
+
+  html /deep/ .flex-8 {
+    -ms-flex: 8;
+    -webkit-flex: 8;
+    flex: 8;
+  }
+
+  html /deep/ .flex-9 {
+    -ms-flex: 9;
+    -webkit-flex: 9;
+    flex: 9;
+  }
+
+  html /deep/ .flex-10 {
+    -ms-flex: 10;
+    -webkit-flex: 10;
+    flex: 10;
+  }
+
+  html /deep/ .flex-11 {
+    -ms-flex: 11;
+    -webkit-flex: 11;
+    flex: 11;
+  }
+
+  html /deep/ .flex-12 {
+    -ms-flex: 12;
+    -webkit-flex: 12;
+    flex: 12;
+  }
+
+  /* alignment in cross axis */
+
+  html /deep/ .layout.start {
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+
+  html /deep/ .layout.center,
+  html /deep/ .layout.center-center {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  html /deep/ .layout.end {
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+  }
+
+  /* alignment in main axis */
+
+  html /deep/ .layout.start-justified {
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  html /deep/ .layout.center-justified,
+  html /deep/ .layout.center-center {
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  html /deep/ .layout.end-justified {
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+
+  html /deep/ .layout.around-justified {
+    -ms-flex-pack: around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
+
+  html /deep/ .layout.justified {
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  /* self alignment */
+
+  html /deep/ .self-start {
+    -ms-align-self: flex-start;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+  }
+
+  html /deep/ .self-center {
+    -ms-align-self: center;
+    -webkit-align-self: center;
+    align-self: center;
+  }
+
+  html /deep/ .self-end {
+    -ms-align-self: flex-end;
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+  }
+
+  html /deep/ .self-stretch {
+    -ms-align-self: stretch;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+  }
+
+  /*******************************
+            Other Layout
+  *******************************/
+
+  html /deep/ .block {
+    display: block;
+  }
+
+  /* IE 10 support for HTML5 hidden attr */
+  html /deep/ [hidden] {
+    display: none !important;
+  }
+
+  html /deep/ .invisible {
+    visibility: hidden !important;
+  }
+
+  html /deep/ .relative {
+    position: relative;
+  }
+
+  html /deep/ .fit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  body.fullbleed {
+    margin: 0;
+    height: 100vh;
+  }
+
+  html /deep/ .scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+  }
+
+  .fixed-bottom,
+  .fixed-left,
+  .fixed-right,
+  .fixed-top {
+    position: fixed;
+  }
+
+  html /deep/ .fixed-top {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  html /deep/ .fixed-right {
+    top: 0;
+    right: 0;
+    botttom: 0;
+  }
+
+  html /deep/ .fixed-bottom {
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  html /deep/ .fixed-left {
+    top: 0;
+    botttom: 0;
+    left: 0;
+  }
+
+</style><style>
+
+  /*******************************
+            Flex Layout
+  *******************************/
+
+  .layout.horizontal,
+  .layout.horizontal-reverse,
+  .layout.vertical,
+  .layout.vertical-reverse {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .layout.inline {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+  }
+
+  .layout.horizontal {
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .layout.horizontal-reverse {
+    -ms-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .layout.vertical {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .layout.vertical-reverse {
+    -ms-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .layout.wrap {
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .layout.wrap-reverse {
+    -ms-flex-wrap: wrap-reverse;
+    -webkit-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  .flex-auto {
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .flex-none {
+    -ms-flex: none;
+    -webkit-flex: none;
+    flex: none;
+  }
+
+  .flex,
+  .flex-1 {
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+  }
+
+  .flex-2 {
+    -ms-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+  }
+
+  .flex-3 {
+    -ms-flex: 3;
+    -webkit-flex: 3;
+    flex: 3;
+  }
+
+  .flex-4 {
+    -ms-flex: 4;
+    -webkit-flex: 4;
+    flex: 4;
+  }
+
+  .flex-5 {
+    -ms-flex: 5;
+    -webkit-flex: 5;
+    flex: 5;
+  }
+
+  .flex-6 {
+    -ms-flex: 6;
+    -webkit-flex: 6;
+    flex: 6;
+  }
+
+  .flex-7 {
+    -ms-flex: 7;
+    -webkit-flex: 7;
+    flex: 7;
+  }
+
+  .flex-8 {
+    -ms-flex: 8;
+    -webkit-flex: 8;
+    flex: 8;
+  }
+
+  .flex-9 {
+    -ms-flex: 9;
+    -webkit-flex: 9;
+    flex: 9;
+  }
+
+  .flex-10 {
+    -ms-flex: 10;
+    -webkit-flex: 10;
+    flex: 10;
+  }
+
+  .flex-11 {
+    -ms-flex: 11;
+    -webkit-flex: 11;
+    flex: 11;
+  }
+
+  .flex-12 {
+    -ms-flex: 12;
+    -webkit-flex: 12;
+    flex: 12;
+  }
+
+  /* alignment in cross axis */
+
+  .layout.start {
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+
+  .layout.center,
+  .layout.center-center {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .layout.end {
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+  }
+
+  /* alignment in main axis */
+
+  .layout.start-justified {
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  .layout.center-justified,
+  .layout.center-center {
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  .layout.end-justified {
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+
+  .layout.around-justified {
+    -ms-flex-pack: around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
+
+  .layout.justified {
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  /* self alignment */
+
+  .self-start {
+    -ms-align-self: flex-start;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+  }
+
+  .self-center {
+    -ms-align-self: center;
+    -webkit-align-self: center;
+    align-self: center;
+  }
+
+  .self-end {
+    -ms-align-self: flex-end;
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+  }
+
+  .self-stretch {
+    -ms-align-self: stretch;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+  }
+
+  /*******************************
+            Other Layout
+  *******************************/
+
+  .block {
+    display: block;
+  }
+
+  /* IE 10 support for HTML5 hidden attr */
+  [hidden] {
+    display: none !important;
+  }
+
+  .invisible {
+    visibility: hidden !important;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .fit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  body.fullbleed {
+    margin: 0;
+    height: 100vh;
+  }
+
+  .scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+  }
+
+  /* fixed position */
+
+  .fixed-bottom,
+  .fixed-left,
+  .fixed-right,
+  .fixed-top {
+    position: fixed;
+  }
+
+  .fixed-top {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .fixed-right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .fixed-bottom {
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .fixed-left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+</style><style></style><style></style><style></style><link rel="import" href="https://netzpurist.de/bower_components/paper-toolbar/paper-toolbar.html">
+	<link rel="import" href="https://netzpurist.de/bower_components/paper-button/paper-button.html">
+	<link rel="import" href="https://netzpurist.de/bower_components/paper-dialog/paper-dialog.html">
+	<link rel="import" href="https://netzpurist.de/bower_components/neon-animation/animations/scale-up-animation.html">
+	<link rel="import" href="https://netzpurist.de/bower_components/neon-animation/animations/fade-out-animation.html">
+	
+    </head>
+	
+    <body>
+		
+		  <!-- Analytics -->
+		  <script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-20970139-1', 'auto');
+			  ga('send', 'pageview');
+		  </script>		
+		
+
+		  <paper-header-panel mode="seamed" class="x-scope paper-header-panel-0">
+    
+
+    <div id="mainPanel" class="style-scope paper-header-panel">
+      <div id="mainContainer" class="flex style-scope paper-header-panel">
+        <paper-material elevation="3" style="width: 940px; margin: auto; " class="x-scope paper-material-0">
+    
+			  <paper-toolbar role="toolbar" class="x-scope paper-toolbar-0">
+
+    <div id="topBar" class="center horizontal layout toolbar-tools style-scope paper-toolbar">
+      <span flex="">netzpurist.de - smart software</span>
+    </div>
+
+    <div id="middleBar" class="center horizontal layout toolbar-tools style-scope paper-toolbar">
+      
+    </div>
+
+    <div id="bottomBar" class="center horizontal layout toolbar-tools style-scope paper-toolbar">
+      
+    </div>
+
+  </paper-toolbar>
+			  
+  </paper-material><div class="pagecontent">
+    	
+			        <div class="" style="">
+
+						<paper-material elevation="3" class="x-scope paper-material-0">
+    
+						<div class="page" style="background: #fafafa;">
+
+			                <!-- LAUNCHER ICON -->
+			                <div id="launcher_icon_div">
+			                    <div id="launcher_icon_div_2">
+			                        <a>
+			                            <img src="./index_files/alarmdroid_launcher.png" style="margin: auto;">
+			                        </a>
+			                        <p style="font-size: 2.5em; font-weight: 300;">
+										AlarmDroid
+									</p>
+			                        <p style="font-size: 1.3em; font-weight: 300;">
+			                            <!-- <a> -->
+											Time to get up!
+			                            <!-- </a> -->
+			                        </p>
+			                    </div><!-- launcher_icon_div_2 -->
+			                </div><!-- launcher_icon_div -->
+							
+			                <div id="cover_app_descr">
+				                <div id="cover_app_descr_2">
+																			<a><img src="./index_files/gplay.png"></a>
+												                        <p id="app_subtitle">
+			                            The powerful, yet simple alarm clock app for Android.
+			                        </p>
+			                        <p id="app_descr">
+			                            The new version 2.0 brings the new Material Design, plenty of new themes, a beautiful new time picker, and overall performance improvements.
+			                        </p>
+			                        <!--p id="dl_apk">
+			                            <a>
+			                            	> Download the apk file directly
+			                            </a>
+			                        </p-->
+				                </div><!-- cover_app_descr_2 -->
+			                </div><!-- cover_app_descr -->
+
+							
+							<div style="clear: both; margin: 0 0 30px 0; height: 0px;"></div>
+
+			                <div class="colbox">
+
+			                    <div class="col31">
+			                        <div class="colcontent greenborder">
+					                    <h2>"Ad-free" add-on
+</h2>
+					                    <p>
+					                        The development of this Android app is supported by in-app advertisements powered by Google AdMob. If you are generally not comfortable with ads, you can purchase the "ad-free" addon in the app (as of version 2.0).
+					                    </p>
+					                    <p>
+											In AlarmDroid, go to Menu &gt; About, and hit the "Purchase ad-free add-on" button.
+										</p>
+										<!-- <p>
+											<a><img src="../img/gplay.png" style="width: 100px;"></a>
+											<br />
+<b>Warning</b>:  include(donate_en.html): failed to open stream: No such file or directory in <b>/var/www/vhosts/netzpurist.de/www.netzpurist.de/index.php</b> on line <b>179</b><br />
+<br />
+<b>Warning</b>:  include(donate_en.html): failed to open stream: No such file or directory in <b>/var/www/vhosts/netzpurist.de/www.netzpurist.de/index.php</b> on line <b>179</b><br />
+<br />
+<b>Warning</b>:  include(): Failed opening 'donate_en.html' for inclusion (include_path='.:/opt/plesk/php/7.4/share/pear') in <b>/var/www/vhosts/netzpurist.de/www.netzpurist.de/index.php</b> on line <b>179</b><br />
+										</p>
+										<div style="clear: both;"></div> -->
+			                        </div><!-- colcontent -->
+			                    </div><!-- col31 -->
+
+			                    <div class="col31">
+			                        <div class="colcontent greenborder">
+						                <h2>Get Support
+</h2>
+						                <p>
+						                    For support, please see the question and answers in the <a>AlarmDroid Google forum</a>. If your question is not yet answered, please post your question at that place, it may be of interest also to other users.
+<br>
+											<paper-button onclick="window.open(&#39;https://groups.google.com/forum/?hl=de#!forum/alarmdroid&#39;, &#39;_blank&#39;, &#39;&#39;);" raised="" style="background: #eee; font-size: small;" role="button" tabindex="0" aria-disabled="false" class="x-scope paper-button-0">
+
+    <paper-ripple class="style-scope paper-button">
+    <div id="background" class="style-scope paper-ripple"></div>
+    <div id="waves" class="style-scope paper-ripple"></div>
+  </paper-ripple>
+
+    <paper-material animated="" class="content  style-scope paper-button x-scope paper-material-0" elevation="1">
+    
+      Post your questions
+
+    
+  </paper-material>
+
+  </paper-button>
+						                </p>
+						                <p>
+											If you prefer direct email contact, for example for purchase-related issues, contact, click the button below.
+<br>
+											<paper-button onclick="window.open(&#39;, &#39;_blank&#39;, &#39;&#39;);" raised="" style="background: #eee; font-size: small;" role="button" tabindex="0" aria-disabled="false" class="x-scope paper-button-0">
+
+    <paper-ripple class="style-scope paper-button">
+    <div id="background" class="style-scope paper-ripple"></div>
+    <div id="waves" class="style-scope paper-ripple"></div>
+  </paper-ripple>
+
+    <paper-material animated="" class="content  style-scope paper-button x-scope paper-material-0" elevation="1">
+    
+      Get support
+
+    
+  </paper-material>
+
+  </paper-button>
+						                </p>
+			                        </div><!-- colcontent -->
+			                    </div><!-- col31 -->
+
+			                    <div class="col33">
+			                        <div class="colcontent greenborder">
+			                            <h2>Screenshots</h2>
+			                            <p style="text-align: left;">
+			                                <a><img src="./index_files/thumb_01.png" class="screenshot_thumb"></a>
+			                                <a><img src="./index_files/thumb_02.png" class="screenshot_thumb"></a>
+			                                <a><img src="./index_files/thumb_03.png" class="screenshot_thumb"></a>
+			                                <a><img src="./index_files/thumb_04.png" class="screenshot_thumb"></a>
+			                                <a><img src="./index_files/thumb_05.png" class="screenshot_thumb"></a>
+			                                <a><img src="./index_files/thumb_06.png" class="screenshot_thumb"></a>
+			                                <a><img src="./index_files/thumb_07.png" class="screenshot_thumb"></a>
+											<a><img src="./index_files/thumb_08.png" class="screenshot_thumb"></a>
+											<a><img src="./index_files/thumb_09.png" class="screenshot_thumb"></a>
+											<a><img src="./index_files/thumb_10.png" class="screenshot_thumb"></a>
+											<a><img src="./index_files/thumb_11.png" class="screenshot_thumb"></a>
+											<a><img src="./index_files/thumb_12.png" class="screenshot_thumb"></a>
+											<a><img src="./index_files/thumb_13.png" class="screenshot_thumb"></a>
+											<a><img src="./index_files/thumb_14.png" class="screenshot_thumb"></a>
+											<a><img src="./index_files/thumb_15.png" class="screenshot_thumb"></a>
+			                            </p>
+			                        </div><!-- colcontent -->
+			                    </div><!-- col33 -->
+
+			                    <div style="clear: both; margin: 0 0 30px 0;"></div>
+
+			                </div><!-- colbox -->
+
+			                <div style="clear: both; margin: 20px 0 0 0;"></div>
+
+			            </div><!-- page -->
+			    		
+  </paper-material>
+
+						<div class="page" style="text-align: center;">
+							<paper-button onclick="toggleDialog(&#39;paper-dialog-impressum&#39;)" style="font-size: 80%; margin: 0 10px 0 10px; " role="button" tabindex="0" aria-disabled="false" class="x-scope paper-button-0">
+
+    <paper-ripple class="style-scope paper-button">
+    <div id="background" class="style-scope paper-ripple"></div>
+    <div id="waves" class="style-scope paper-ripple"></div>
+  </paper-ripple>
+
+    <paper-material animated="" class="content  style-scope paper-button x-scope paper-material-0" elevation="0">
+    
+      Impressum
+    
+  </paper-material>
+
+  </paper-button>
+							<paper-button onclick="window.open(&#39;, &#39;_blank&#39;, &#39;&#39;);" style="font-size: 80%; margin: 0 10px 0 10px;" role="button" tabindex="0" aria-disabled="false" class="x-scope paper-button-0">
+
+    <paper-ripple class="style-scope paper-button">
+    <div id="background" class="style-scope paper-ripple"></div>
+    <div id="waves" class="style-scope paper-ripple"></div>
+  </paper-ripple>
+
+    <paper-material animated="" class="content  style-scope paper-button x-scope paper-material-0" elevation="0">
+    
+      Support
+    
+  </paper-material>
+
+  </paper-button>
+							<paper-button onclick="window.open(&#39;, &#39;_blank&#39;, &#39;&#39;);" style="font-size: 80%; margin: 0 10px 0 10px; " role="button" tabindex="0" aria-disabled="false" class="x-scope paper-button-0">
+
+    <paper-ripple class="style-scope paper-button">
+    <div id="background" class="style-scope paper-ripple"></div>
+    <div id="waves" class="style-scope paper-ripple"></div>
+  </paper-ripple>
+
+    <paper-material animated="" class="content  style-scope paper-button x-scope paper-material-0" elevation="0">
+    
+      Google Play
+    
+  </paper-material>
+
+  </paper-button>
+						</div>
+
+			        </div><!-- block -->
+
+			    </div>
+      </div>
+      <div id="dropShadow" class="style-scope paper-header-panel"></div>
+    </div>
+  </paper-header-panel>
+
+
+		  <!-- Dialogs -->
+
+		  <paper-dialog id="paper-dialog-impressum" role="dialog" tabindex="-1" aria-hidden="true" aria-modal="false" class="x-scope paper-dialog-0" aria-labelledby="paper-dialog-header-924" style="outline: none; display: none;">
+    
+		  
+		  		<h2 id="paper-dialog-header-924">Impressum</h2>
+				
+				<paper-dialog-scrollable>
+				
+					<p><strong>Angaben gemäß § 5 TMG</strong>
+					</p><p>Fabian Lüghausen<br>
+					netzpurist.de - smart software<br>
+					Franz-Böckle-Str. 35<br>
+					D-53125 Bonn<br>
+					Germany
+					</p>
+
+					<p><strong>Kontakt</strong>
+					</p><p>Telefon: +49 176 / 23 55 30 50<br>
+					E-Mail: support@netzpurist.de</p>
+
+					<p><strong>Umsatzsteuer-ID</strong>
+					</p><p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br>
+					DE815290741</p>
+					
+				</paper-dialog-scrollable>
+				
+				<div class="buttons">
+					<paper-button dialog-dismiss="" role="button" tabindex="0" aria-disabled="false" class="x-scope paper-button-0">
+
+    <paper-ripple class="style-scope paper-button">
+    <div id="background" class="style-scope paper-ripple"></div>
+    <div id="waves" class="style-scope paper-ripple"></div>
+  </paper-ripple>
+
+    <paper-material animated="" class="content  style-scope paper-button x-scope paper-material-0" elevation="0">
+    
+      Close
+    
+  </paper-material>
+
+  </paper-button>
+				</div>
+				
+		  
+  </paper-dialog>
+
+
+		<!-- Scripts -->
+
+		<script>
+			function toggleDialog(dialog_id) {
+				var dialog = document.querySelector('paper-dialog[id=' + dialog_id + ']');
+				dialog.toggle();
+			}
+		</script>
+  
+		<script>
+			//var tabs = document.querySelector('paper-tabs');
+			//tabs.addEventListener('core-select', function(e) {
+			//	console.log("Selected: " + tabs.selected);
+			//});
+		</script>
+
+		<div style="height: 20px; "></div><!-- bottom padding -->
+
+    
+
+
+<div id="lightboxOverlay" style="display: none;"></div><div id="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image"><div class="lb-nav"><a></a><a></a></div><div class="lb-loader"><a><img src="./index_files/loading.gif"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a><img src="./index_files/close.png"></a></div></div></div></div></body></html>
